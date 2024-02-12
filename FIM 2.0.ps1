@@ -16,11 +16,11 @@ if($c -eq 1)
 {
     # send email alert
 
-    $MyEmail = “fimalertmail@gmail.com”
-    #$To = “hritztikz@gmail.com”
+    $MyEmail = “ENTER-EMAIL-ID”
+    
     $Subject = “ALERT: UNKNOWN NEW FILE CREATED”
     $Body = “An unknown and new file has been created in the folder”
-    $password = ConvertTo-SecureString "fimalert1234" -AsPlainText -Force
+    $password = ConvertTo-SecureString "ENTER-YOUR-PASSWORD" -AsPlainText -Force
     $Creds = $mycreds = New-Object System.Management.Automation.PSCredential($MyEmail, $password)
     $SMTP= “smtp.gmail.com”
 Start-Sleep 1
@@ -34,11 +34,11 @@ Function SendMailTampered($t){
       
     # send email alert
 
-    $MyEmail = “fimalertmail@gmail.com”
-    #$To = “hritztikz@gmail.com”
+    $MyEmail = “ENTER-EMAIL-ID”
+    
     $Subject = “ALERT: FILE TAMPERED”
     $Body = “A file has been tampared with in the folder”
-    $password = ConvertTo-SecureString "fimalert1234" -AsPlainText -Force
+    $password = ConvertTo-SecureString "ENTER-YOUR-PASSWORD" -AsPlainText -Force
     $Creds = $mycreds = New-Object System.Management.Automation.PSCredential($MyEmail, $password)
     $SMTP= “smtp.gmail.com”
 Start-Sleep 1
@@ -52,11 +52,11 @@ Function SendMailDeleted($d){
       {
     # send email alert
 
-    $MyEmail = “fimalertmail@gmail.com”
-    #$To = “hritztikz@gmail.com”
+    $MyEmail = “ENTER-EMAIL-ID”
+    
     $Subject = “ALERT: FILE DELETED”
     $Body = “A file has been deleted from the folder"
-    $password = ConvertTo-SecureString "fimalert1234" -AsPlainText -Force
+    $password = ConvertTo-SecureString "ENTER-YOUR-PASSWORD" -AsPlainText -Force
     $Creds = $mycreds = New-Object System.Management.Automation.PSCredential($MyEmail, $password)
     $SMTP= “smtp.gmail.com”
 Start-Sleep 1
@@ -71,7 +71,6 @@ Function Calculate-File-Hash($filepath)
  return $filehash
 }
 
-# $hash = Calculate-File-Hash "C:\Users\hritz\Desktop\Hritika\test\1.txt"
 
 Function Erase-Baseline-If-Already-Exists()
 {
